@@ -18,11 +18,12 @@ clf.fit(x_train,y_train)
 prediction=clf.predict(x_test)
 acc=confusion_matrix(y_test,prediction)
 print(accuracy(acc))
-img=Image.open('C:/Users/Taraksh Goyal/Desktop/coding/python/siketlearn/five.png')#enter the path of pic
+img=Image.open('/five.png')#enter the path of pic
 data=list(img.getdata())
 for i in range (len(data)):
     data[i]=255-data[i]
 result=data
 result=np.array(result)/256
 p=clf.predict([result])
+
 print(p)
